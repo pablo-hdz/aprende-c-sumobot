@@ -1,0 +1,124 @@
+# Sumobot IdeaBoard: del kit CENFOTEC a un firmware en C
+
+Código, pruebas y documentación para programar el **Sumobot CENFOTEC 2025** (placa **IdeaBoard
+de CRCibernética**, ESP32): una versión en **CircuitPython** que ya ganó una pelea y un **firmware
+nativo en C con ESP-IDF** que la lleva más lejos.
+
+> **Estado:** la versión CircuitPython está probada en robots reales. El firmware en C **compila
+> sin errores pero todavía no se ha probado en un robot**. Ver [qué está verificado y qué no](docs/06-estado-y-verificacion.md).
+
+## Descripción
+
+Un sumobot es un robot que pelea en un círculo negro con borde blanco (el *dojo*): gana el que
+saca al otro. Este proyecto reúne todo lo necesario para que un robot del kit:
+
+- **no se salga del dojo** (4 sensores infrarrojos de piso),
+- **encuentre y empuje al rival** (sensor ultrasónico),
+- **se adapte a cada robot** (autocalibración de sensores al arrancar),
+- y, en la versión C, **gire por grados y detecte choques** (acelerómetro/giroscopio opcional).
+
+## Problema o necesidad
+
+El kit trae ejemplos sueltos, pero al probarlos aparecieron problemas que cualquier estudiante
+vuelve a encontrarse:
+
+- la librería del ultrasónico **falla una lectura de cada dos** con tiempos de espera cortos;
+- el ejemplo del sensor IR usa un pin (IO33) que **no es el del kit 2025** (IO36/39/34/35);
+- **cada robot lee distinto** los sensores, así que un umbral fijo no sirve para todos;
+- no hay una guía que explique **por qué** pasa cada cosa, ni un camino para pasar a C.
+
+Este repositorio documenta esos problemas, sus causas y soluciones reutilizables.
+
+## Público objetivo
+
+- **Estudiantes** del curso de robótica / Sumobot CENFOTEC que quieren un robot competitivo.
+- **Quien quiera aprender software embebido en C** con un proyecto concreto (ESP32, FreeRTOS, PWM,
+  ADC, interrupciones, I2C).
+- **Docentes y mentores** que buscan material para diagnosticar robots del kit.
+
+## Origen
+
+Nació probando un sumobot paso a paso: primero el ultrasónico, después cada componente, luego la
+estrategia de pelea. Cada error encontrado (sensor en el pin equivocado, librería lenta, umbrales
+distintos por robot, un robot con los sensores sin corriente) se convirtió en una prueba o una
+mejora. La versión CircuitPython ganó una pelea, y de ahí surgió la pregunta: *¿qué tan lejos se
+puede llevar esta placa programándola en C?* La historia completa está en
+[docs/07-historia.md](docs/07-historia.md).
+
+## Estado actual
+
+| Parte | Estado |
+|---|---|
+| [`circuitpython/sumobot_ganador.py`](circuitpython/sumobot_ganador.py) | ✅ probado: ganó una pelea (umbrales fijos de un robot) |
+| [`circuitpython/sumobot_base.py`](circuitpython/sumobot_base.py) | ⚠️ cargado y probado sin motores en un segundo robot; falta pelea real |
+| [`circuitpython/pruebas/`](circuitpython/pruebas/) | ✅ scripts de diagnóstico usados en el robot del autor |
+| [`firmware-c/`](firmware-c/) | ⚠️ compila sin errores (ESP-IDF v6.1); **no flasheado ni probado en robot** |
+| [`docs/`](docs/) | ✅ teoría de C/ESP-IDF, arquitectura, módulos, instalación, tácticas, historia |
+
+## Estructura del repositorio
+
+```
+sumobot-ideaboard/
+├── README.md              este archivo
+├── CONTRIBUTING.md        cómo colaborar
+├── LICENSE                MIT
+├── circuitpython/         código para Thonny (lo que trae el kit)
+│   ├── sumobot_ganador.py versión que ganó
+│   ├── sumobot_base.py    versión con autocalibración para cualquier sumo
+│   └── pruebas/           diagnóstico de componentes, IR y ultrasónico
+├── firmware-c/            firmware nativo en C (ESP-IDF)
+│   └── main/              un archivo .c por componente + config.h con todos los ajustes
+└── docs/                  documentación teórica y práctica
+```
+
+## Cómo comenzar
+
+Elige tu camino según lo que quieras hacer:
+
+| Quiero... | Empieza aquí |
+|---|---|
+| **Que mi sumo pelee hoy** (sin instalar nada nuevo) | Abre [`circuitpython/sumobot_base.py`](circuitpython/sumobot_base.py) en Thonny y guárdalo en el robot como `code.py`. Instrucciones al inicio del archivo |
+| **Saber si mi robot tiene algo dañado** | Corre [`circuitpython/pruebas/prueba_componentes.py`](circuitpython/pruebas/prueba_componentes.py) y [`calibrar_ir.py`](circuitpython/pruebas/calibrar_ir.py) en Thonny |
+| **Entender cómo funciona en C** | Lee [docs/01](docs/01-que-es-c-y-esp-idf.md) → [docs/02](docs/02-arquitectura.md) → [docs/03](docs/03-modulos.md) |
+| **Compilar y cargar el firmware en C** | Sigue [docs/04-instalar-y-flashear.md](docs/04-instalar-y-flashear.md) (⚠️ borra CircuitPython de la placa) |
+| **Mejorar la estrategia** | Lee [docs/05-tacticas.md](docs/05-tacticas.md) y cambia valores en [`firmware-c/main/config.h`](firmware-c/main/config.h) |
+| **Colaborar** | Lee [CONTRIBUTING.md](CONTRIBUTING.md) y revisa los Issues abiertos |
+
+Necesitas: un robot del kit Sumobot CENFOTEC 2025, cable USB, 4 baterías AA y
+[Thonny](https://thonny.org) (CircuitPython) o [ESP-IDF v6.1](docs/04-instalar-y-flashear.md) (C).
+
+## Próximos pasos
+
+- [ ] Probar el firmware en C en un robot real (autodiagnóstico, sensores, motores, pelea).
+- [ ] Medir el umbral de choque de la IMU y probar los giros por grados.
+- [ ] Agregar fotos del robot y del cableado.
+- [ ] Graficar la telemetría de una pelea para afinar la estrategia.
+- [ ] Probar tácticas nuevas: esquivar al inicio, búsqueda en espiral, detector de empuje.
+- [ ] Agregar un divisor de voltaje al ECHO del ultrasónico.
+
+## Créditos y referencias
+
+- Drivers de motores, LED, ADC, I2C e IMU adaptados de los ejemplos de **CRCibernética**,
+  [espressif-ideaboard](https://github.com/CRCibernetica/espressif-ideaboard) (licencia MIT).
+- Conexiones del kit tomadas como referencia de
+  [Universidad-Cenfotec/Sumobot](https://github.com/Universidad-Cenfotec/Sumobot). No se copiaron
+  archivos ni imágenes de ese repositorio.
+- Placa IdeaBoard: [CRCibernética](https://www.crcibernetica.com/crcibernetica-ideaboard/).
+
+## Uso de inteligencia artificial
+
+Este proyecto se desarrolló con apoyo de **Claude** (Anthropic), usado en Claude Code:
+
+- **Qué hizo la IA:** propuso y escribió los scripts de prueba, el código CircuitPython y el
+  firmware en C; corrió las pruebas por el puerto serie en las placas conectadas; investigó la
+  documentación de la IdeaBoard y del ESP32; y redactó esta documentación.
+- **Qué hizo y verificó el autor:** puso cada robot en las condiciones de prueba (sobre negro,
+  sobre blanco, en el aire), observó LED y motores, peleó con los robots y decidió qué versión
+  conservar (la que ganó).
+- **Qué falta verificar:** todo lo marcado como pendiente en
+  [docs/06-estado-y-verificacion.md](docs/06-estado-y-verificacion.md), en especial el firmware en C
+  en un robot real.
+
+## Licencia
+
+[MIT](LICENSE): puedes usar, modificar y compartir este proyecto, manteniendo el aviso de autoría.

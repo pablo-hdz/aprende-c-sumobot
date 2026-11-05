@@ -1,0 +1,16 @@
+# ESP-IDF: archivos generados al compilar
+firmware-c/build/
+firmware-c/sdkconfig
+firmware-c/sdkconfig.old
+firmware-c/managed_components/
+firmware-c/dependencies.lock
+*.log
+
+# Respaldos de placas (8 MB cada uno, pueden contener datos personales)
+*.bin
+
+# Sistema / editores
+.DS_Store
+Thumbs.db
+.vscode/
+__pycache__/

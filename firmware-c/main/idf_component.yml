@@ -1,0 +1,3 @@
+## WS2812B RGB LED driver from the Espressif Component Registry (downloaded on first build)
+dependencies:
+  espressif/led_strip: "^3"
