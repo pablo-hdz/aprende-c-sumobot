@@ -46,6 +46,4 @@ flowchart LR
 - **Issues:** dudas, errores, resultados de prueba y propuestas (con plantillas).
 - **Pull Requests:** toda contribución de código o documentación.
 - **Documentación (`docs/`):** el conocimiento acumulado; cada aprendizaje termina aquí.
-- **Proyecto relacionado:** [ModuBot](https://github.com/Universidad-Cenfotec/SINT-741-Curso-Activadores/tree/main/4.%20Estudiantes/pablo-hdz/mi-comunidad-modubot),
-  robot modular abierto para la IdeaBoard, cuyo "código de ejemplo" está pendiente. Este repositorio
-  puede ser ese código.
+
