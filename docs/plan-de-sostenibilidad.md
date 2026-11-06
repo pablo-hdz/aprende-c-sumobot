@@ -39,7 +39,6 @@ Meta: **al menos 2 personas mantenedoras** además del autor, para que nunca dep
 | Corto plazo | Probar el firmware en C en robots reales y publicar resultados |
 | | Publicar soluciones de los ejercicios de la ruta de C |
 | Mediano plazo | Lecciones nuevas (WiFi, ESP-NOW entre robots, telemetría en el celular) |
-| | Usarlo como código base de [ModuBot](mapa-de-comunidad.md#espacios-de-la-comunidad) |
 | Largo plazo | Que el curso Sumobot lo use como material, y cada generación deje sus mejoras |
 
 ## Riesgos y cómo se cubren
