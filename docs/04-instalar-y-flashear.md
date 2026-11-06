@@ -3,26 +3,18 @@
 > ⚠️ **Flashear este firmware borra CircuitPython** y todos los archivos de la placa (`code.py`, `/lib`).
 > Haz un respaldo antes (paso 3) y guarda tu `code.py` en la computadora.
 
-## 1. Instalar ESP-IDF v6.1 (una sola vez, ~4 GB, 10–25 min)
+## 1. Instalar ESP-IDF v6.1 (una sola vez)
 
-Guía oficial de CRCibernética para Linux, macOS y Windows:
-[espressif-ideaboard/setup.md](https://github.com/CRCibernetica/espressif-ideaboard/blob/master/skills/ideaboard-esp-idf/references/setup.md).
-
-En Windows por línea de comandos (así se instaló para este proyecto):
-
-```bat
-mkdir C:\esp && cd C:\esp
-git clone -b v6.1 --recursive --depth 1 --shallow-submodules https://github.com/espressif/esp-idf.git esp-idf
-C:\esp\esp-idf\install.bat esp32
-```
+Sigue la [guía para correr C, partes 3.3 y 3.4](guia-correr-c.md#33-esp-idf-con-el-instalador-oficial-eim):
+se instala con el **ESP-IDF Installation Manager (EIM)**, el instalador oficial de Espressif.
 
 Reglas para Windows: rutas **cortas, sin espacios ni tildes y fuera de OneDrive**
 (por ejemplo `C:\esp\sumobot-ideaboard`). Con rutas largas la compilación falla.
 
-En cada terminal nueva hay que activar el entorno:
+Para usar `idf.py` en PowerShell, activa el entorno en cada terminal nueva:
 
 ```bat
-C:\esp\esp-idf\export.bat
+. C:\Espressif\tools\Microsoft.v6.1.PowerShell_profile.ps1
 ```
 
 ## 2. Compilar

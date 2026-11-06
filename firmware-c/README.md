@@ -5,7 +5,7 @@ Firmware nativo para la IdeaBoard del Sumobot CENFOTEC 2025.
 > ⚠️ Compila sin errores, pero **todavía no se ha probado en un robot**. Flashearlo borra CircuitPython.
 
 ```bat
-C:\esp\esp-idf\export.bat
+. C:\Espressif\tools\Microsoft.v6.1.PowerShell_profile.ps1
 cd C:\esp\sumobot-ideaboard\firmware-c
 idf.py set-target esp32
 idf.py build
