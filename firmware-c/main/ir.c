@@ -14,7 +14,7 @@ static adc_oneshot_unit_handle_t adc;
 static adc_cali_handle_t cali;
 static adc_channel_t chan[4];
 
-static int  thr[4] = { 2518, 2518, 503, 503 };   // por defecto: los del código ganador
+static int  thr[4] = { 2518, 2518, 503, 503 };   // por defecto: los de la versión CircuitPython
 static bool alive[4] = { true, true, true, true };
 static int64_t calib_sum[4];
 static int calib_n;

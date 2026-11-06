@@ -1,7 +1,7 @@
 # Sumobot IdeaBoard: del kit CENFOTEC a un firmware en C
 
 Código, pruebas y documentación para programar el **Sumobot CENFOTEC 2025** (placa **IdeaBoard
-de CRCibernética**, ESP32): una versión en **CircuitPython** que ya ganó una pelea y un **firmware
+de CRCibernética**, ESP32): una versión en **CircuitPython** probada en robots reales y un **firmware
 nativo en C con ESP-IDF** que la lleva más lejos.
 
 > **Estado:** la versión CircuitPython está probada en robots reales. El firmware en C **compila
@@ -41,7 +41,7 @@ Este repositorio documenta esos problemas, sus causas y soluciones reutilizables
 Nació probando un sumobot paso a paso: primero el ultrasónico, después cada componente, luego la
 estrategia de pelea. Cada error encontrado (sensor en el pin equivocado, librería lenta, umbrales
 distintos por robot, un robot con los sensores sin corriente) se convirtió en una prueba o una
-mejora. La versión CircuitPython ganó una pelea, y de ahí surgió la pregunta: *¿qué tan lejos se
+mejora. Con la versión CircuitPython funcionando en el dojo surgió la pregunta: *¿qué tan lejos se
 puede llevar esta placa programándola en C?* La historia completa está en
 [docs/07-historia.md](docs/07-historia.md).
 
@@ -49,7 +49,7 @@ puede llevar esta placa programándola en C?* La historia completa está en
 
 | Parte | Estado |
 |---|---|
-| [`circuitpython/sumobot_ganador.py`](circuitpython/sumobot_ganador.py) | ✅ probado: ganó una pelea (umbrales fijos de un robot) |
+| [`circuitpython/sumobot_umbrales_fijos.py`](circuitpython/sumobot_umbrales_fijos.py) | ✅ probado en el robot del autor (umbrales fijos de ese robot) |
 | [`circuitpython/sumobot_base.py`](circuitpython/sumobot_base.py) | ⚠️ cargado y probado sin motores en un segundo robot; falta pelea real |
 | [`circuitpython/pruebas/`](circuitpython/pruebas/) | ✅ scripts de diagnóstico usados en el robot del autor |
 | [`firmware-c/`](firmware-c/) | ⚠️ compila sin errores (ESP-IDF v6.1); **no flasheado ni probado en robot** |
@@ -61,9 +61,9 @@ puede llevar esta placa programándola en C?* La historia completa está en
 sumobot-ideaboard/
 ├── README.md              este archivo
 ├── CONTRIBUTING.md        cómo colaborar
-├── LICENSE                MIT
+├── LICENSE                dominio público (The Unlicense)
 ├── circuitpython/         código para Thonny (lo que trae el kit)
-│   ├── sumobot_ganador.py versión que ganó
+│   ├── sumobot_umbrales_fijos.py  versión con umbrales fijos
 │   ├── sumobot_base.py    versión con autocalibración para cualquier sumo
 │   └── pruebas/           diagnóstico de componentes, IR y ultrasónico
 ├── firmware-c/            firmware nativo en C (ESP-IDF)
@@ -99,7 +99,7 @@ Necesitas: un robot del kit Sumobot CENFOTEC 2025, cable USB, 4 baterías AA y
 ## Créditos y referencias
 
 - Drivers de motores, LED, ADC, I2C e IMU adaptados de los ejemplos de **CRCibernética**,
-  [espressif-ideaboard](https://github.com/CRCibernetica/espressif-ideaboard) (licencia MIT).
+  [espressif-ideaboard](https://github.com/CRCibernetica/espressif-ideaboard) (publicado como MIT por CRCibernética).
 - Conexiones del kit tomadas como referencia de
   [Universidad-Cenfotec/Sumobot](https://github.com/Universidad-Cenfotec/Sumobot). No se copiaron
   archivos ni imágenes de ese repositorio.
@@ -112,13 +112,12 @@ Este proyecto se desarrolló con apoyo de **Claude** (Anthropic), usado en Claud
 - **Qué hizo la IA:** propuso y escribió los scripts de prueba, el código CircuitPython y el
   firmware en C; corrió las pruebas por el puerto serie en las placas conectadas; investigó la
   documentación de la IdeaBoard y del ESP32; y redactó esta documentación.
-- **Qué hizo y verificó el autor:** puso cada robot en las condiciones de prueba (sobre negro,
-  sobre blanco, en el aire), observó LED y motores, peleó con los robots y decidió qué versión
-  conservar (la que ganó).
 - **Qué falta verificar:** todo lo marcado como pendiente en
   [docs/06-estado-y-verificacion.md](docs/06-estado-y-verificacion.md), en especial el firmware en C
   en un robot real.
 
 ## Licencia
 
-[MIT](LICENSE): puedes usar, modificar y compartir este proyecto, manteniendo el aviso de autoría.
+Proyecto **libre, de dominio público** ([The Unlicense](LICENSE)): puedes usarlo, copiarlo, modificarlo y
+compartirlo sin pedir permiso ni dar crédito. Las partes adaptadas de CRCibernética conservan su
+licencia MIT original (ver el final de [LICENSE](LICENSE)).

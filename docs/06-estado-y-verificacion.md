@@ -13,7 +13,6 @@ Este documento separa lo que **se comprobó** de lo que **todavía no**. Si prue
 | Cada robot lee distinto (adelante: 1100–3130 mV sobre negro) | medido en 2 robots; por eso existe la autocalibración |
 | Un robot leyó los 4 IR en 0 V incluso en el aire | medido. Causa **probable, no confirmada**: falta 3V3/GND en el conector de sensores (según la guía de conexiones de Cenfotec) |
 | La librería `hcsr04.mpy` falla 1 de cada 2 lecturas con `timeout_sec` < 0.1 s | medido; leer el pin directo da ~6 ms por lectura |
-| La estrategia base **ganó una pelea** | versión CircuitPython [`sumobot_ganador.py`](../circuitpython/sumobot_ganador.py), reportado por el autor |
 | Umbrales 50000/10000 (CircuitPython) = 2518/503 mV | conversión `mV = valor × 3300 / 65535` |
 
 ## Pendiente (no probado todavía)
@@ -31,7 +30,7 @@ Este documento separa lo que **se comprobó** de lo que **todavía no**. Si prue
 ## De dónde sale cada dato
 
 - Pines, voltajes e IC de la placa: repositorio oficial de CRCibernética
-  [espressif-ideaboard](https://github.com/CRCibernetica/espressif-ideaboard) (licencia MIT).
+  [espressif-ideaboard](https://github.com/CRCibernetica/espressif-ideaboard) (publicado como MIT por CRCibernética).
 - Conexiones del kit 2025: repositorio de la Universidad Cenfotec
   [Universidad-Cenfotec/Sumobot](https://github.com/Universidad-Cenfotec/Sumobot) (solo como
   referencia; no se copiaron archivos ni imágenes).

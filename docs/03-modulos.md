@@ -34,7 +34,7 @@ El puente H **L9110S** tiene dos entradas por motor (A y B):
 | 1 | 1 | **freno** |
 
 - Usa el periférico **LEDC** a 50 Hz con 14 bits, igual que la librería `ideaboard.py` de CircuitPython
-  (con esa frecuencia se ajustaron las velocidades del código ganador).
+  (con esa frecuencia se ajustaron las velocidades del código CircuitPython).
 - `drive(izq, der)`: velocidades de −1.0 a 1.0. Aplica `MOTOR_FWD` y `MOTOR_LEFT/RIGHT` de `config.h`.
 - `motors_brake()`: freno. Es lo primero que se ejecuta al encender.
 

@@ -1,4 +1,4 @@
-# Sumobot CENFOTEC 2025 - CODIGO BASE (versión ganadora + autocalibración)
+# Sumobot CENFOTEC 2025 - CODIGO BASE (estrategia base + autocalibración)
 # Sirve para cualquier sumo del kit 2025 sin tocar nada.
 #
 # Cómo se usa:

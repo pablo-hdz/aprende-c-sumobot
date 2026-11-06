@@ -1,7 +1,7 @@
 // ============================================================================
 //  Sumobot CENFOTEC 2025 - firmware nativo ESP-IDF
 //
-//  Misma estrategia que la versión ganadora en CircuitPython, pero:
+//  Misma estrategia que la versión en CircuitPython, pero:
 //   - ciclo de control fijo de 200 Hz que nunca se bloquea (el ultrasónico mide en segundo plano)
 //   - autocalibración de los 4 IR sobre negro y detección de sensores muertos
 //   - giros exactos por grados y "sigue empujando tras un choque" si la IMU está conectada

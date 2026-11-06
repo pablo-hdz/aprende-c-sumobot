@@ -18,9 +18,9 @@
 #define MOTOR_LEFT      1       // motor_1 es la rueda izquierda (como en el código de Cenfotec)
 #define MOTOR_RIGHT     2
 #define MOTOR_FWD       1       // poner -1 si "adelante" va hacia atrás
-#define MOTOR_PWM_HZ    50      // igual que la librería ideaboard.py (con esto se ajustó el ganador)
+#define MOTOR_PWM_HZ    50      // igual que la librería ideaboard.py (con esto se ajustó la versión CircuitPython)
 
-// ---------------------------------------------------------------- CONDUCTA (valores de la versión ganadora)
+// ---------------------------------------------------------------- CONDUCTA (valores de la versión CircuitPython)
 #define LOOP_PERIOD_MS      5       // ciclo de control: 200 Hz
 #define START_DELAY_MS      5000    // regla de sumo: 5 s tras soltar BOOT (se calibra en este tiempo)
 #define DIST_ATTACK_CM      60      // atacar si hay algo más cerca que esto
@@ -32,14 +32,14 @@
 #define TURN_DEG            120     // giro tras retroceder si HAY IMU (180 si ambos sensores)
 #define T_TURN_MAX_MS       900     // tope de seguridad del giro con IMU
 #define T_FWD_ESCAPE_MS     250     // avance a fondo al ver la línea atrás
-#define ATTACK_HOLD_MS      0       // memoria de ataque sin IMU (0 = como el ganador)
+#define ATTACK_HOLD_MS      0       // memoria de ataque sin IMU (0 = como la versión CircuitPython)
 #define CONTACT_HOLD_MS     300     // con IMU: sigue empujando este tiempo tras sentir un choque
 
 // ---------------------------------------------------------------- AUTOCALIBRACIÓN IR (en milivoltios)
 // Equivalencias con CircuitPython: mV = valor * 3300 / 65535  (50000 -> 2518 mV, 10000 -> 503 mV)
 #define IR_SAMPLES          4       // promedio por lectura
 #define IR_SATURATED_MV     2800    // si sobre negro marca más que esto, el sensor está saturado...
-#define IR_SAT_THRESHOLD_MV 2518    // ...y se usa este umbral (= 50000 del código ganador)
+#define IR_SAT_THRESHOLD_MV 2518    // ...y se usa este umbral (= 50000 en CircuitPython)
 #define IR_FACTOR_FRONT     0.75f   // si no: umbral = negro * 0.75 (S1, S2)
 #define IR_FACTOR_BACK      0.50f   // umbral = negro * 0.50 (S3, S4)
 #define IR_MIN_THRESHOLD_MV 300     // el blanco real lee ~140-200 mV

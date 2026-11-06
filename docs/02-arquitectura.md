@@ -116,7 +116,7 @@ umbral:
 
 ```
 si negro < 300 mV           -> sensor DAÑADO (sin 3V3/GND): se ignora y el LED parpadea morado
-si negro > 2800 mV          -> sensor saturado: umbral = 2518 mV (el valor que ganó en pelea)
+si negro > 2800 mV          -> sensor saturado: umbral = 2518 mV (el valor ajustado en CircuitPython)
 si no, sensores delanteros  -> umbral = negro × 0.75
        sensores traseros    -> umbral = negro × 0.50   (mínimo 300 mV)
 

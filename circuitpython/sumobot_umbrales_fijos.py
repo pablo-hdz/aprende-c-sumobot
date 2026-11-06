@@ -1,4 +1,4 @@
-# Sumobot CENFOTEC 2025 - VERSION GANADORA (sin memoria de ataque)
+# Sumobot CENFOTEC 2025 - VERSION CON UMBRALES FIJOS (sin memoria de ataque)
 # Basado en "codigo inicio/code.py" de github.com/Universidad-Cenfotec/Sumobot
 # Cambios:
 #   - Ultrasónico leído directo (~6 ms) en vez de hcsr04.mpy, que con timeout

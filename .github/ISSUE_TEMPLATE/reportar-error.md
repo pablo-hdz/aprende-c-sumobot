@@ -5,7 +5,7 @@ title: "[Error] "
 labels: bug
 ---
 
-**Versión usada:** (`circuitpython/sumobot_base.py`, `circuitpython/sumobot_ganador.py`, `firmware-c`, ...)
+**Versión usada:** (`circuitpython/sumobot_base.py`, `circuitpython/sumobot_umbrales_fijos.py`, `firmware-c`, ...)
 
 **Qué esperaba que pasara:**
 

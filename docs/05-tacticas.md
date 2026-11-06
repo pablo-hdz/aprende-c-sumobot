@@ -1,6 +1,6 @@
 # 5. Tácticas y ajustes
 
-## La estrategia base (la que ganó una pelea en CircuitPython)
+## La estrategia base (la de la versión CircuitPython)
 
 1. **Nunca salir del dojo.** La línea blanca se revisa antes que cualquier otra cosa, en cada ciclo.
 2. **Buscar girando en el lugar** a velocidad baja, para no pasarse del rival.
