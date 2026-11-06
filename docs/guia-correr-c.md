@@ -188,12 +188,12 @@ Debe aparecer `Hola, estoy aprendiendo C`. 🎉
 > `/lib`). Si la placa tiene algo importante, haz primero el respaldo de la parte 7. Se puede volver
 > a CircuitPython cuando quieras.
 
-El ejemplo está en [`ejemplos/01-rgb-ideaboard/`](../ejemplos/01-rgb-ideaboard/). Hace que el LED
+El ejemplo está en [`practicas-aplicables/01-led-rgb/`](../practicas-aplicables/01-led-rgb/). Hace que el LED
 de la placa muestre rojo, verde, azul y blanco, y luego un arcoíris. Si mantienes presionado **BOOT**
 durante el arcoíris, el LED se apaga.
 
-1. **Descarga el proyecto:** copia la carpeta `ejemplos\01-rgb-ideaboard` a `C:\esp\01-rgb-ideaboard`.
-2. **Ábrelo en VS Code:** **File → Open Folder** → `C:\esp\01-rgb-ideaboard`. Si la barra de abajo no
+1. **Descarga el proyecto:** copia la carpeta `practicas-aplicables\01-led-rgb` a `C:\esp\01-led-rgb`.
+2. **Ábrelo en VS Code:** **File → Open Folder** → `C:\esp\01-led-rgb`. Si la barra de abajo no
    dice **ESP-IDF v6.1.0**, haz **Ctrl+Shift+P → ESP-IDF: Select Current ESP-IDF Version** (paso 3.4).
 3. **Conecta la IdeaBoard** por USB. Cierra **Thonny** si está abierto: solo un programa puede usar
    la placa a la vez.
@@ -235,7 +235,7 @@ idf.py -p COM5 flash monitor
 
 ## 6. Entender el código del LED, línea por línea
 
-Abre [`main/main.c`](../ejemplos/01-rgb-ideaboard/main/main.c) y sigue esta tabla:
+Abre [`main/main.c`](../practicas-aplicables/01-led-rgb/main/main.c) y sigue esta tabla:
 
 | Código | Qué hace |
 |---|---|

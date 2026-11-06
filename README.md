@@ -80,6 +80,7 @@ sumobot-ideaboard/
 │   ├── sumobot_umbrales_fijos.py  versión con umbrales fijos
 │   ├── sumobot_base.py    versión con autocalibración para cualquier sumo
 │   └── pruebas/           diagnóstico de componentes, IR y ultrasónico
+├── practicas-aplicables/  prácticas con la IdeaBoard: conexión, programa, fotos y video
 ├── firmware-c/            firmware nativo en C (ESP-IDF)
 │   └── main/              un archivo .c por componente + config.h con todos los ajustes
 └── docs/                  documentación teórica y práctica
@@ -94,8 +95,8 @@ Elige tu camino según lo que quieras hacer:
 
 | Quiero... | Empieza aquí |
 |---|---|
-| **Nunca he usado C: instalar todo y prender el LED de la IdeaBoard** | Sigue la [guía paso a paso](docs/guia-correr-c.md) y el ejemplo [`ejemplos/01-rgb-ideaboard`](ejemplos/01-rgb-ideaboard/) |
-| **Practicar C con la IdeaBoard y módulos de sensores** | Sigue la [serie de ejemplos](ejemplos/) en orden: LED RGB, botón, buzzer... |
+| **Nunca he usado C: instalar todo y prender el LED de la IdeaBoard** | Sigue la [guía paso a paso](docs/guia-correr-c.md) y el ejemplo [`practicas-aplicables/01-led-rgb`](practicas-aplicables/01-led-rgb/) |
+| **Practicar C con la IdeaBoard y módulos de sensores** | Sigue las [prácticas aplicables](practicas-aplicables/) en orden: LED RGB, pulsador, buzzer... (cada una con conexión, programa, fotos y video) |
 | **Aprender C desde cero con el robot** | Lee [docs/01](docs/01-que-es-c-y-esp-idf.md) y sigue la [ruta de lecciones](docs/08-aprende-c.md) en orden |
 | **Que mi sumo pelee hoy** (sin instalar nada nuevo) | Abre [`circuitpython/sumobot_base.py`](circuitpython/sumobot_base.py) en Thonny y guárdalo en el robot como `code.py`. Instrucciones al inicio del archivo |
 | **Saber si mi robot tiene algo dañado** | Corre [`circuitpython/pruebas/prueba_componentes.py`](circuitpython/pruebas/prueba_componentes.py) y [`calibrar_ir.py`](circuitpython/pruebas/calibrar_ir.py) en Thonny |
