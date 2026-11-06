@@ -61,3 +61,5 @@ Soltado
 
 ✅ Probado en una IdeaBoard real con el botón Keyestudio: 17 pulsaciones seguidas, cada una
 registrada una sola vez y con su "Soltado".
+
+🎥 **Evidencia en video:** [evidencia/pulsador.mp4](evidencia/pulsador.mp4)
