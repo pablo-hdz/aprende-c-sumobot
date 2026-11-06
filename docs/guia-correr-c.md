@@ -276,5 +276,10 @@ Para instalar un CircuitPython limpio en lugar del respaldo:
 ---
 
 **Estado de esta guía:** la instalación se hizo siguiendo estos pasos en Windows 11 (ESP-IDF v6.1 y gcc 15),
-y el ejemplo del LED compila sin errores ni advertencias. Cargar el ejemplo en una IdeaBoard real **todavía no se ha probado**; si lo
-pruebas, cuéntalo en un Issue con la plantilla "Resultado de prueba".
+y el ejemplo del LED compila sin errores ni advertencias. **Probado en una IdeaBoard real** (ESP32-D0WD-V3,
+8 MB): se respaldó la placa, se flasheó a 115200 baudios, el monitor mostró `Hola desde la IdeaBoard!` y la
+secuencia de colores, y el LED cambió de color. Si lo pruebas en otra placa, cuéntalo en un Issue con la
+plantilla "Resultado de prueba".
+
+> **Nota:** en esa placa, respaldar a 460800 o 921600 baudios corrompía los datos; a **115200** funcionó.
+> Si `read-flash` falla con "Corrupt data" o "Packet content transfer stopped", baja la velocidad a 115200.
