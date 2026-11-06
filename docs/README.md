@@ -1,4 +1,4 @@
-# Documentación del firmware Sumobot en C (ESP-IDF)
+# Documentación: aprende C con un Sumobot
 
 Guía teórica y práctica del firmware nativo en C para el **Sumobot CENFOTEC 2025** con la placa
 **IdeaBoard de CRCibernética** (ESP32).
@@ -12,6 +12,7 @@ Guía teórica y práctica del firmware nativo en C para el **Sumobot CENFOTEC 2
 | 5 | [Tácticas y ajustes](05-tacticas.md) | Estrategia de pelea, parámetros de `config.h` y cómo afinarlos |
 | 6 | [Estado y qué falta verificar](06-estado-y-verificacion.md) | Qué está probado, qué no, y de dónde salen los datos |
 | 7 | [Historia del proyecto](07-historia.md) | Qué se probó, qué falló y qué se aprendió en cada iteración |
+| 8 | [**Aprende C con el sumobot**](08-aprende-c.md) | 11 lecciones de C, cada una en el código real del robot, con ejercicios |
 
 ## En una frase
 
