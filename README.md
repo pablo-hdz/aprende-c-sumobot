@@ -83,7 +83,9 @@ sumobot-ideaboard/
 ├── firmware-c/            firmware nativo en C (ESP-IDF)
 │   └── main/              un archivo .c por componente + config.h con todos los ajustes
 └── docs/                  documentación teórica y práctica
-    └── 08-aprende-c.md    ruta de lecciones de C con ejercicios
+    ├── 08-aprende-c.md    ruta de lecciones de C con ejercicios
+    ├── mapa-de-comunidad.md, plan-de-sostenibilidad.md, retroalimentacion.md
+    └── 01..07             teoría de C, arquitectura, módulos, instalación, tácticas, estado, historia
 ```
 
 ## Cómo comenzar
@@ -102,6 +104,20 @@ Elige tu camino según lo que quieras hacer:
 
 Necesitas: un robot del kit Sumobot CENFOTEC 2025, cable USB, 4 baterías AA y
 [Thonny](https://thonny.org) (CircuitPython) o [ESP-IDF v6.1](docs/04-instalar-y-flashear.md) (C).
+
+## Comunidad
+
+Este proyecto está pensado para que otras personas lo **usen, lo mejoren y lo continúen sin depender del autor**:
+
+- [**Mapa de comunidad**](docs/mapa-de-comunidad.md): dominio y trayectorias de participación (explorar → probar → aprender → contribuir → mentorear → mantener).
+- [**Plan de sostenibilidad**](docs/plan-de-sostenibilidad.md): roles, cómo se toman decisiones y cómo puede crecer.
+- [**Registro de retroalimentación**](docs/retroalimentacion.md): qué comentarios se recibieron y qué se cambió.
+- [**Historia del proyecto**](docs/07-historia.md): cada prueba, error y corrección, convertidos en recursos reutilizables.
+
+**¿Qué necesita este proyecto para que otra persona lo comprenda, lo use y lo mejore sin depender de mí?**
+Documentación que explique el *por qué* y no solo el *cómo*, una lista honesta de lo que falta probar,
+código dividido en piezas pequeñas que se entienden por separado, una puerta de entrada para cada nivel
+y una licencia libre que permita continuarlo. Eso es lo que este repositorio intenta dar.
 
 ## Próximos pasos
 

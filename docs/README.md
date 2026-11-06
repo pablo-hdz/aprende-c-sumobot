@@ -14,6 +14,14 @@ Guía teórica y práctica del firmware nativo en C para el **Sumobot CENFOTEC 2
 | 7 | [Historia del proyecto](07-historia.md) | Qué se probó, qué falló y qué se aprendió en cada iteración |
 | 8 | [**Aprende C con el sumobot**](08-aprende-c.md) | 11 lecciones de C, cada una en el código real del robot, con ejercicios |
 
+## Comunidad
+
+| Documento | Para qué sirve |
+|---|---|
+| [Mapa de comunidad](mapa-de-comunidad.md) | Dominio, perfiles y trayectorias de participación |
+| [Plan de sostenibilidad](plan-de-sostenibilidad.md) | Roles, decisiones y cómo crecer sin el autor |
+| [Registro de retroalimentación](retroalimentacion.md) | Comentarios recibidos y cambios hechos |
+
 ## En una frase
 
 El robot repite 200 veces por segundo: **leer sensores → decidir → mover motores**. Revisa
