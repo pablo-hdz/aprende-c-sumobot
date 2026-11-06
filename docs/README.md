@@ -13,6 +13,7 @@ Guía teórica y práctica del firmware nativo en C para el **Sumobot CENFOTEC 2
 | 6 | [Estado y qué falta verificar](06-estado-y-verificacion.md) | Qué está probado, qué no, y de dónde salen los datos |
 | 7 | [Historia del proyecto](07-historia.md) | Qué se probó, qué falló y qué se aprendió en cada iteración |
 | 8 | [**Aprende C con el sumobot**](08-aprende-c.md) | 11 lecciones de C, cada una en el código real del robot, con ejercicios |
+| – | [Glosario](glosario.md) | Términos técnicos explicados en una línea (ADC, PWM, I2C, watchdog...) |
 
 ## Comunidad
 
