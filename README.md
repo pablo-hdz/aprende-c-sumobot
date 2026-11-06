@@ -94,6 +94,7 @@ Elige tu camino según lo que quieras hacer:
 
 | Quiero... | Empieza aquí |
 |---|---|
+| **Nunca he usado C: instalar todo y prender el LED de la IdeaBoard** | Sigue la [guía paso a paso](docs/guia-correr-c.md) y el ejemplo [`ejemplos/01-rgb-ideaboard`](ejemplos/01-rgb-ideaboard/) |
 | **Aprender C desde cero con el robot** | Lee [docs/01](docs/01-que-es-c-y-esp-idf.md) y sigue la [ruta de lecciones](docs/08-aprende-c.md) en orden |
 | **Que mi sumo pelee hoy** (sin instalar nada nuevo) | Abre [`circuitpython/sumobot_base.py`](circuitpython/sumobot_base.py) en Thonny y guárdalo en el robot como `code.py`. Instrucciones al inicio del archivo |
 | **Saber si mi robot tiene algo dañado** | Corre [`circuitpython/pruebas/prueba_componentes.py`](circuitpython/pruebas/prueba_componentes.py) y [`calibrar_ir.py`](circuitpython/pruebas/calibrar_ir.py) en Thonny |

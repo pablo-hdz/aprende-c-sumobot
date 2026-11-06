@@ -1,0 +1,3 @@
+## Driver del LED WS2812B (se descarga solo en la primera compilación; necesita internet)
+dependencies:
+  espressif/led_strip: "^3"

@@ -5,6 +5,7 @@ Guía teórica y práctica del firmware nativo en C para el **Sumobot CENFOTEC 2
 
 | # | Documento | Para qué sirve |
 |---|---|---|
+| 0 | [**Guía: cómo correr C**](guia-correr-c.md) | Qué es C, instalar todo, primer programa en la PC y el LED RGB en la IdeaBoard |
 | 1 | [Qué es C y ESP-IDF](01-que-es-c-y-esp-idf.md) | Conceptos base: lenguaje C, microcontrolador, FreeRTOS, compilar y flashear |
 | 2 | [Arquitectura del sistema](02-arquitectura.md) | Cómo está organizado el programa y cómo fluye la información |
 | 3 | [Módulos, archivo por archivo](03-modulos.md) | Qué hace cada archivo `.c` y sus funciones principales |
